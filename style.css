@@ -25,17 +25,18 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: black;
 }
 
 /* Overlay to slightly deepen bg for readability */
-body::before {
+/* body::before {
   content: '';
   position: fixed;
   inset: 0;
   background: rgba(20, 10, 40, 0.18);
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 /* Blobs hidden — background image replaces them */
 .blob { display: none; }
@@ -73,6 +74,7 @@ body::before {
   position: relative;
   z-index: 10;
   animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+  
 }
 
 /* Glowing border ring animation */
