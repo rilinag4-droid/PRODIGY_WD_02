@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="stars" id="stars"></div>
+
+  <!-- Top left branding -->
+  <div class="brand-tag">Rii<span>~</span>tempo<em class="by-line"></em></div>
+
+  <div class="card">
+    <div class="header">
+      <div class="emoji-row">⏱️</div>
+      <h1>Stopwatch</h1>
+      <p>Track your time with style ✨</p>
+    </div>
+
+    <div class="display-wrap">
+      <div class="display">
+        <div class="time-text" id="timeDisplay">00:00<span class="ms">.00</span></div>
+        <div class="status-badge" id="statusBadge">Ready</div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-start" id="startBtn" onclick="toggleStart()">▶ Start</button>
+      <button class="btn btn-lap"   id="lapBtn"   onclick="recordLap()" disabled>🏁 Lap</button>
+      <button class="btn btn-reset"               onclick="resetTimer()">↺ Reset</button>
+    </div>
+
+    <div class="laps-section" id="lapsSection">
+      <div class="laps-title">Laps</div>
+      <div class="empty-laps" id="emptyLaps">No laps yet 🌸</div>
+      <div id="lapsList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
